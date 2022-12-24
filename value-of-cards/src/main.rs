@@ -1,6 +1,5 @@
 #![allow(dead_code)]
-
-Enum Card{
+enum Card{
     Ace,
     Two,
     Three,
@@ -36,7 +35,7 @@ impl Hand{
         let mut subtotal=0; 
         let mut aces=0; 
 
-         for card in &self.cards.iter() {
+         for card in &self.cards {
             subtotal+= match card{
                 Ace=> {aces+=1; 0}
                 Two => 2,
